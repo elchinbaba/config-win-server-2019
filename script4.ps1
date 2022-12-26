@@ -14,7 +14,7 @@ $Router = "192.168.2.16"
 Install-WindowsFeature DHCP
 
 # Step 2. Create the servers security group
-Invoke-Expression 'netsh dhcp and securitygroups'
+Invoke-Expression 'netsh dhcp add securitygroups'
 
 # Step 3. Restart the DHCP-server
 Restart-Service dhcpserver
