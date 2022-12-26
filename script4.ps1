@@ -6,7 +6,7 @@ $ScopeEndIP = "192.168.2.254"
 $ScopeSubnetMask = "255.255.255.0"
 
 $ScopeId = "192.168.2.0"
-$DnsServer = @("192.168.0.1", "8.8.8.8")
+$DnsServer = @("8.8.8.8") # 192.168.0.1 is not a valid DNS server.
 $Router = "192.168.2.16"
 
 # Step 1. Show the DHCP component
