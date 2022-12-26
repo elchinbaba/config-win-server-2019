@@ -6,8 +6,7 @@ $ScopeEndIP = "192.168.2.254"
 $ScopeSubnetMask = "255.255.255.0"
 
 $ScopeId = "192.168.2.0"
-$DnsServerMain = "192.168.0.1"
-$DnsServerGoogle = "8.8.8.8"
+$DnsServer = @("192.168.0.1", "8.8.8.8")
 $Router = "192.168.2.16"
 
 # Step 1. Show the DHCP component
@@ -26,4 +25,4 @@ Add-DHCPServerv4Scope -Name $ScopeName -StartRange $ScopeStartIP -EndRange $Scop
 Set-DHCPServerv4Scope -ScopeId $ScopeId -LeaseDuration 0.07:00:00
 
 # Step 6. Show the DNS servers and the router
-Set-DHCPServerv4OptionValue -ScopeId $ScopeId -DnsServer $DnsServerMain, $DnsServerGoogle -Router $Router
+Set-DHCPServerv4OptionValue -ScopeId $ScopeId -DnsServer $DnsServer -Router $Router
